@@ -12,6 +12,8 @@ namespace MyNoteAPI
     {
         public void Configuration(IAppBuilder app)
         {
+            //bu satırtüm sitelere response izin verir
+            app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             ConfigureAuth(app);
         }
     }
